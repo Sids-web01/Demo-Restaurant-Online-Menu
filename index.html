@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Town Website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header class="active">
+        <a href="#" class="logo">BRAND <br><span>NAME</span></a>
+        <!--<img src="363cfa65-3a12-414f-8684-0500b97044b7_removalai_preview.png" alt="" class="chicken-img">-->
+        <img src="bars.png" id="menu-icon">
+        <nav>
+           
+            <a href="#">Menu</a>
+            <a href="#">Review</a>
+           
+            
+           
+            <a href="#">Contact Us</a>
+            
+        </nav>
+    </header>
+    <div class="bars-box active">
+       <!-- <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        
+        <div class="bar" style="--i:2;"></div>
+         -->
+       
+        <div class="bar" style="--i:1;"></div>
+    </div>
+   
+    <section class="menu active" id="menu">
+        <div class="menu-container">
+            <div class="search-header">
+                <h1 class="menu-h1">BRAND <span class="menu-span1">NAME</span> Menu</h1>
+                <br>
+                <div class="input-box">
+                    <input type="text" id="search" placeholder="Search for menu items...">
+                </div>
+        
+               </div>
+                  <!-- Filter Button -->
+                 <div class="filter-container">
+            <button id="food-filter" class="filter-btn">Food</button>
+            <button id="drink-filter" class="filter-btn">Drinks</button>
+            <div id="cart-indicator">
+                <img src="cart.png" alt="">
+                <h1 class="cart-indicator">0</h1>
+            </div>
+          </div>
+        
+          <!-- Menu Results Section -->
+          <div id="menu-results">
+            <!-- Menu cards will be dynamically inserted here -->
+            <div class="menu-card food" data-name="Burger" data-img="burger full.png">
+              <h3>Burger</h3>
+              <p class="price">Le 40</p>
+              <img src="burger full.png" alt="Burger">
+              <button class="add-to-cart" data-name="burger" data-price="40">Add to Cart</button>
+            </div>
+            <div class="menu-card drink" data-name="Coke">
+                <h3>Coke</h3>
+                <p class="price">Le 20</p>
+                <img src="Coke_grande.jpg" alt="Burger">
+                <button class="add-to-cart" data-name="coke" data-price="20">Add to Cart</button>
+              </div>
+              <div class="menu-card drink" data-name="Sierra Juice">
+                <h3>Sierra Juice</h3>
+                <p class="price">Le 20</p>
+                <img src="Pinapple-.png" alt="Burger">
+                <button class="add-to-cart" data-name="Sierra Juice" data-price="20">Add to Cart</button>
+              </div>
+              <div class="menu-card food" data-name="Pizza">
+                <h3>Pizza</h3>
+                <p class="price">Le 150</p>
+                <img src="pizza.png" alt="Burger">
+                <button class="add-to-cart" data-name="Pizza" data-price="150">Add to Cart</button>
+              </div>
+              <div class="menu-card drink" data-name="Fanta">
+                <h3>Fanta</h3>
+                <p class="price">Le 20</p>
+                <img src="fanta-orange-2025.jpg" alt="Burger">
+                <button class="add-to-cart" data-name="Fanta" data-price="20">Add to Cart</button>
+              </div>
+              <div class="menu-card drink" data-name="Pepsi">
+                <h3>Pepsi</h3>
+                <p class="price">Le 30</p>
+                <img src="pepsi.png" alt="Burger">
+                <button class="add-to-cart" data-name="Pepsi" data-price="30">Add to Cart</button>
+              </div>
+              <div class="menu-card drink" data-name="Sprite">
+                <h3>Sprite</h3>
+                <p class="price">Le 40</p>
+                <img src="spirte.jpg" alt="Burger">
+                <button class="add-to-cart" data-name="burger" data-price="40">Add to Cart</button>
+              </div>
+              <div class="menu-card food" data-name="Chicken leg">
+                <h3>Chicken leg</h3>
+                <p class="price">Le 30</p>
+                <img src="multi chicken.png" alt="Burger">
+                <button class="add-to-cart" data-name="Chicken leg" data-price="30">Add to Cart</button>
+              </div>
+              
+           
+          </div>
+        
+          <div class="menu-btn-box">
+            <button id="check-order" class="order-check">Check Order</button>
+          </div>
+        </div>
+        </div>
+        
+        
+
+    </section>
+
+    <section class="review" id="review">
+        <div class="resume-container">
+            <div class="resume-box">
+                <br>
+                <br>
+                <br>
+                <br><br><br><br><br><br>
+                <p class="desc">Don't Forget to leave a review, and check out latest comments.</p>
+                <button class="resume-btn active">Order Receipt</button>
+                <button class="resume-btn">Add Reviews</button>
+                <button class="resume-btn">Recent Comments</button>
+                <button class="resume-btn">About Me</button>
+            </div>
+            <div class="resume-box">
+                <div class="resume-detail experience active" >
+                    <h2 class="heading">Customer's Order <span> Receipt</span></h2>
+                    <p class="desc">Below are your orders. Tap button below to send it to the chef</p>
+                    <div class="resume-list">
+                      <div id="order-container">
+                        <h2>Order Receipt</h2>
+                        <div id="order-receipt">
+                          <h3>Order Details</h3>
+                          <table id="order-receipt-table">
+                              <thead>
+                                  <tr>
+                                    <th>Item</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="cart-items"></tbody>
+                           
+                          </table>
+                          <div class="sum-of-all">
+                              <p id="total-price">Total: Le 0</p>
+                               <p id="delivery-fee">Delivery Fee: Le 5</p>
+                               <p id="final-total">Final Total: Le 0</p>
+                          </div>
+       
+                          
+                         
+                          <input type="text" id="user-name" placeholder="Your Name" required>
+                  
+                          <!-- Table Number Dropdown -->
+            <select id="table-number" required>
+              <option value="">Select Table Number</option>
+              <option value="1">Table 1</option>
+              <option value="2">Table 2</option>
+              <option value="3">Table 3</option>
+              <!-- Add more table numbers as needed -->
+          </select>
+
+          <!-- Textarea for Additional Instructions -->
+          <textarea id="additional-instructions" placeholder="Additional Instructions (e.g., no onions, extra spicy)" rows="4"></textarea>
+                          
+                  
+                          <button id="order-now-btn" onclick="handleOrderNow()">Order Now</button>
+                        </div>
+                      </div>
+                       
+                       
+                    </div>
+                   
+                
+                </div>
+                <div class="resume-detail education">
+                    <h2 class="heading">Review <span>Form</span></h2>
+                    <p class="desc">Thank You For Choosing our Restaurant please leave a review below.</p>
+                    <div class="resume-list">
+                        <div class="add-review-box">
+                            <div class="review-form-container">
+                                <h2>BRAND <Span>NAME</Span> <br>Review Form</h2>
+                                <form id="review-form-id" onsubmit="sendReviewEmail(event)">
+                                  <!-- Name Field -->
+                                  <div class="review-form-group">
+                                    <label class="review-label" for="review-name">Name:</label>
+                                    <input class="review-input" type="text" id="review-name" name="review-name" required>
+                                  </div>
+                            
+                                  <!-- Rating Field (Dropdown) -->
+                                  <div class="review-form-group">
+                                    <label class="review-label" for="review-rating">Rating:</label>
+                                    <select class="review-select" id="review-rating" name="review-rating" required>
+                                      <option value="Poor">Poor</option>
+                                      <option value="Fair">Fair</option>
+                                      <option value="Good">Good</option>
+                                      <option value="Very Good">Very Good</option>
+                                      <option value="Excellent">Excellent</option>
+                                    </select>
+                                  </div>
+                            
+                                  <!-- Review/Comments Field -->
+                                  <div class="review-form-group">
+                                    <label class="review-label" for="review-comment">Your Review:</label>
+                                    <textarea class="review-textarea" id="review-comment" name="review-comment" rows="4" maxlength="500" required></textarea>
+                                    <small class="review-small">Max 500 characters</small>
+                                  </div>
+                            
+                                  <!-- Date of Visit -->
+                                  <div class="review-form-group">
+                                    <label class="review-label" for="review-date">Date of Visit:</label>
+                                    <input class="review-date" type="date" id="review-date" name="review-date">
+                                  </div>
+                            
+                                  <!-- Submit Button -->
+                                  <button class="review-button" type="submit">Submit Review</button>
+                                </form>
+                            
+                                
+                              </div>
+                            
+                            
+                            
+        
+                        </div>
+                       
+
+                    </div>
+                   
+                </div>
+                <div class="resume-detail skills">
+                    <h2 class="heading">Recent <span>Comments</span></h2>
+                    <p class="desc">Don't miss out on latest reviews and comments</p>
+                    <div class="resume-list">
+                        <div class="comment-container">
+                            <div class="comment-boxes">
+                              <div class="comment-box">
+                                <p>Comment 1</p>
+                              </div>
+                              <div class="comment-box">
+                                <p>Comment 2</p>
+                              </div>
+                              <div class="comment-box">
+                                <p>Comment 3</p>
+                              </div>
+                              <div class="comment-box">
+                                <p>Comment 4</p>
+                              </div>
+                              <div class="comment-box">
+                                <p>Comment 5</p>
+                              </div>
+                              <div class="comment-box">
+                                <p>Comment 6</p>
+                              </div>
+                              <div class="comment-box">
+                                <p>Comment 7</p>
+                              </div>
+                              <div class="comment-box">
+                                <p>Comment 8</p>
+                              </div>
+                              <div class="comment-box">
+                                <p>Comment 8</p>
+                              </div>
+                              <div class="comment-box">
+                                <p>Comment 8</p>
+                              </div>
+                              <div class="comment-box">
+                                <p>Comment 8</p>
+                              </div>
+                              <div class="comment-box">
+                                <p>Comment 8</p>
+                              </div>
+                              <!-- Add more comment boxes as needed -->
+                            </div>
+                         </div>
+                       
+                    </div>
+                   
+                </div>
+                <div class="resume-detail about">
+                    <h2 class="heading">About <span>Us</span></h2>
+                    <p class="desc">Below are Some details About our Restaurant</p>
+                    <div class="resume-list">
+                        <div class="about-us-container">
+                            <div class="about-header">
+                                <h1>BRAND <span>NAME</span></h1>
+                                <img src="brand logo 2.png" alt="brand logo">
+                            </div>
+                            <div class="about-mid">
+                                <h1>Our <span>Vision</span></h1>
+                            </div>
+
+                            <div class="about1">
+                                <div class="about-box">
+                                    <h1>Quality & <br> Freshness</h1>
+                                    <P>
+                                        We are committed to serving the freshest and highest-quality 
+                                        ingredients, ensuring every bite is packed with flavor.
+                                    </P>
+
+
+
+                                </div>
+                                <div class="about-box">
+                                    <h1>Customer <br> Satisfaction</h1>
+                                    <P>
+                                        Our goal is to create a warm and welcoming 
+                                        environment where every customer leaves happy and satisfied.
+                                    </P>
+
+                                </div>
+                                <div class="about-box">
+                                    <h1>Community & <br> Growth</h1>
+                                    <P>
+                                        We strive to be more than just a restaurant;
+                                         we aim to bring people together and support our local community
+                                    </P>
+
+                                </div>
+
+                            </div>
+                            <div class="about2">
+
+                            </div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+           
+        </div>
+    </section>
+    
+    
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-box" id="contact-box1">
+                <br><br><br><br>
+                <div class="frame-box">
+                    <iframe class="contact-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d493.3898372145606!2d-13.143427712237955!3d8.389984806780417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf04e7c696842b67%3A0x1f283cfbfca2d4a5!2sChicken%20Town%20(Jui)!5e0!3m2!1sen!2ssl!4v1738805650634!5m2!1sen!2ssl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                   </div>
+                <p class="desc">Get in touch to order more tasty meals</p>
+                    <div class="contact-detail">
+                        <img src="17847648.png" alt="">
+                        <div class="detail">
+                            <p>Phone</p>
+                            <p>+232 79728028</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <img src="contacticon.png" alt="">
+                        <div class="detail">
+                            <p>Email</p>
+                            <p>Kamaraabubakarrsidique@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <img src="17847648.png" alt="">
+                        <div class="detail">
+                            <p>Address</p>
+                            <p>Rokel Waterloo</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="contact-box">
+                <form action="">
+                    <h2 class="heading">Contact <span>Us!</span></h2>
+                    <div class="field-box">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="text" placeholder="Phone Number" required>
+                        <input type="text" placeholder="Email Subject" required>
+                        <textarea name="" id="" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
