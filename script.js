@@ -219,9 +219,9 @@ document.querySelector('#order-now-btn').addEventListener('click', handleOrderNo
    });
  
    // Update total and final total (with delivery fee)
-   const finalTotal = total + deliveryFee;
+   
    document.getElementById('total-price').textContent = `Total: Le ${total}`;
-   document.getElementById('final-total').textContent = `Final Total: Le ${finalTotal}`;
+
  }
 
 
