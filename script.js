@@ -155,10 +155,9 @@ function collectOrderDetails() {
 
   // Add pricing details
   const totalPrice = document.querySelector('#total-price')?.innerText || "Total: Le 0";
-  const deliveryFee = document.querySelector('#delivery-fee')?.innerText || "Delivery Fee: Le 0";
-  const finalTotal = document.querySelector('#final-total')?.innerText || "Final Total: Le 0";
+  
 
-  orderDetails += `\n\n💰 ${totalPrice}\n🚚 ${deliveryFee}\n💵 ${finalTotal}`;
+  orderDetails += `\n\n💰 ${totalPrice}\n🚚`;
 
   return orderDetails;
 }

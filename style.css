@@ -687,27 +687,7 @@ iframe {
     transition: .5s;
     
   }
-  #reservation-container {
-    width: 450px;
-    padding: 20px;
-    height: 500px;
-    overflow-y: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(45deg, orangered, gold);
-    transition: .5s;
-    font-size: 1.8rem;
-  }
-  #reservation-container::-webkit-scrollbar{
-    width: .7rem;
-}
-#reservation-container::-webkit-scrollbar-thumb{
-    background: transparent;
-    border-radius: 1rem;
-}
-#reservation-container:hover::-webkit-scrollbar-thumb{
-    background: gold;
-}
+  
 
 #order-container::-webkit-scrollbar{
     width: .7rem;
@@ -1786,6 +1766,21 @@ textarea {
       }
 
 }
+@media screen and (max-width:360px){
+  #menu-results{
+    margin-left: 5rem;
+  }
+  }
+  @media screen and (max-width:370px){
+    #menu-results{
+      margin-left: 5rem;
+    }
+    }
+    @media screen and (max-width:380px){
+      #menu-results{
+        margin-left: 5rem;
+      }
+      }
 @media screen and (max-width:350px){
     .poll-container{
         width: 260px;
@@ -1813,6 +1808,11 @@ textarea {
         width: 230px;
         height: 350px;
       }
+      @media screen and (max-width:340px){
+        #menu-results{
+          margin-left: 0;
+        }
+        }
       
       .menu-card{
         
@@ -1858,3 +1858,14 @@ textarea {
   
   
 }
+
+    @media screen and (max-width:320px){
+      #menu-results{
+        margin-left: 0;
+      }
+      }
+      @media screen and (max-width:330px){
+        #menu-results{
+          margin-left: 0;
+        }
+        }
